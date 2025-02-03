@@ -14,4 +14,4 @@ def create_new_string(input_string):
         print(result)
 str1 = input("Enter a string:")
 create_new_string(str1)
-#2.
+#2..
