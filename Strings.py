@@ -27,13 +27,55 @@
 
 #3.Append new string in the middle of a given string
 
-def append_string(str1, str2):
-    middle_index = int(len(str1)/2)
-    result = str1[0:middle_index]+str2+str1[middle_index:]
-    return result
-str1 = input("Enter string:")
-str2 = input("Enter another string:")
-result = append_string(str1, str2)
-print(result)
+#
+#def append_string(str1, str2):
+#     middle_index = int(len(str1)/2)
+#     result = str1[0:middle_index]+str2+str1[middle_index:]
+#     return result
+# str1 = input("Enter string:")
+# str2 = input("Enter another string:")
+# result = append_string(str1, str2)
+# print(result)
 
-#4..
+#4.Given a string contains a combination of the lower and upper case letters. Write a program to arrange characters
+#such that all lower case should come first
+
+# def lower_characters_first(str1):
+#     lowercase = ''
+#     uppercase = ''
+#     length = int(len(str1))
+#     for character in range(length):
+#
+#         if str1[character].islower():
+#              lowercase = lowercase+str1[character]
+#         else:
+#             uppercase = uppercase+str1[character]
+#     return lowercase+uppercase
+# str1 = input("Enter a string:")
+# final_string = lower_characters_first(str1)
+# print(final_string)
+
+#5.Count all letters, digits, special symbols from given string
+
+def find_digits_chars_symbols(sample_str):
+    char_count = 0
+    digit_count = 0
+    symbol_count = 0
+    for char in sample_str:
+        if char.isalpha():
+            char_count += 1
+        elif char.isdigit():
+            digit_count += 1
+        # if it is not letter or digit then it is special symbol
+        else:
+            symbol_count += 1
+
+    print("Chars =", char_count, "Digits =", digit_count, "Symbol =", symbol_count)
+
+sample_str = "P@yn2at&#i5ve"
+print("total counts of chars, Digits, and symbols \n")
+find_digits_chars_symbols(sample_str)
+
+#6..
+
+
