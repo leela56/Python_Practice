@@ -57,25 +57,73 @@
 
 #5.Count all letters, digits, special symbols from given string
 
-def find_digits_chars_symbols(sample_str):
-    char_count = 0
-    digit_count = 0
-    symbol_count = 0
-    for char in sample_str:
-        if char.isalpha():
-            char_count += 1
-        elif char.isdigit():
-            digit_count += 1
-        # if it is not letter or digit then it is special symbol
+# def find_digits_chars_symbols(sample_str):
+#     char_count = 0
+#     digit_count = 0
+#     symbol_count = 0
+#     for char in sample_str:
+#         if char.isalpha():
+#             char_count += 1
+#         elif char.isdigit():
+#             digit_count += 1
+#         # if it is not letter or digit then it is special symbol
+#         else:
+#             symbol_count += 1
+#
+#     print("Chars =", char_count, "Digits =", digit_count, "Symbol =", symbol_count)
+#
+# sample_str = "P@yn2at&#i5ve"
+# print("total counts of chars, Digits, and symbols \n")
+# find_digits_chars_symbols(sample_str)
+
+#6.Create a new program to create a new string s3 made of the first character of s1, then the last char of s2,
+#next the second character of s1 and second last char of s2 and so on
+# s1 = "Abc"
+# s2 = "Xyz"
+#
+# # get string length
+# s1_length = len(s1)
+# s2_length = len(s2)
+#
+# # get length of a bigger string
+# length = s1_length if s1_length > s2_length else s2_length
+# result = ""
+#
+# # reverse s2
+# s2 = s2[::-1]
+#
+# # iterate string
+# # s1 ascending and s2 descending
+# for i in range(length):
+#     if i < s1_length:
+#         result = result + s1[i]
+#     if i < s2_length:
+#         result = result + s2[i]
+#
+# print(result)
+
+#7.Write a program to check if two strings are balanced. For example, strings s1 and s2 are balanced if all the characters in the s1 are present in s2.
+# The character’s position doesn’t matter.
+
+def string_balance_test(s1, s2):
+    flag = True
+    for char in s1:
+        if char in s2:
+            continue
         else:
-            symbol_count += 1
+            flag = False
+    return flag
 
-    print("Chars =", char_count, "Digits =", digit_count, "Symbol =", symbol_count)
 
-sample_str = "P@yn2at&#i5ve"
-print("total counts of chars, Digits, and symbols \n")
-find_digits_chars_symbols(sample_str)
+s1 = "Yn"
+s2 = "PYnative"
+flag = string_balance_test(s1, s2)
+print("s1 and s2 are balanced:", flag)
 
-#6..
+s1 = "Ynf"
+s2 = "PYnative"
+flag = string_balance_test(s1, s2)
+print("s1 and s2 are balanced:", flag)
 
+#8..
 
